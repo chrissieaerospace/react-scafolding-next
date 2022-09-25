@@ -2,21 +2,15 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import {
-  AuthHocProps,
-  AuthenticationHOC,
-  useAuthenticationHOC,
-} from "../app/Shared/hoc/Authentication";
+import { AuthenticationHOC } from "../app/Shared/hoc/Authentication";
 import { toPromise } from "react-boilerplate-redux-saga-hoc/utils";
 function Home(props) {
-  // console.log(AuthHocProps);
-  console.log(props);
   const {
     actions: { JSON_PLACEHOLDER_POSTS_API_CALL },
   } = props.Authentication_hoc;
   useEffect(() => {
     JSON_PLACEHOLDER_POSTS_API_CALL();
-  }, []);
+  });
   return (
     <div className={styles.container}>
       <Head>
