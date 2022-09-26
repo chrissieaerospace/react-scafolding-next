@@ -10,7 +10,7 @@ function Home(props) {
   } = props.Authentication_hoc;
   useEffect(() => {
     JSON_PLACEHOLDER_POSTS_API_CALL();
-  });
+  }, []);
   return (
     <div className={styles.container}>
       <Head>

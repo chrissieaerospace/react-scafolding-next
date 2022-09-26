@@ -8,7 +8,7 @@ import {
 
 import CREATE_REDUCER from "./createReducer";
 
-const IS_DEVELOPMENT = true || process.env.NODE_ENV === ENV.DEVELOPMENT;
+const IS_DEVELOPMENT = process.env.NODE_ENV === ENV.DEVELOPMENT;
 
 const EXTRA_CONFIG = {
   [HOC_MAIN_CONFIG_KEY.IS_DEVELOPMENT]: IS_DEVELOPMENT,

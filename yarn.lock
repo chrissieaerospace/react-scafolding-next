@@ -1817,10 +1817,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-boilerplate-redux-saga-hoc@^1.7.35:
-  version "1.7.35"
-  resolved "https://registry.yarnpkg.com/react-boilerplate-redux-saga-hoc/-/react-boilerplate-redux-saga-hoc-1.7.35.tgz#849ac2f6c2bb81f5f4069f824cceb28ff937a48c"
-  integrity sha512-0K3OF3sg5vQtW/+6ejbt0oBHJxw867ezZqra71pFLjuG1zP3Av+GGYNznFNgEhUErErFy3Z/KJe8GHS9w4eVgw==
+react-boilerplate-redux-saga-hoc@^1.7.40:
+  version "1.7.40"
+  resolved "https://registry.yarnpkg.com/react-boilerplate-redux-saga-hoc/-/react-boilerplate-redux-saga-hoc-1.7.40.tgz#e58d31fa7ffae531f9278f2cbf94fcb4ff518e88"
+  integrity sha512-AQnd4NqtqQjap2d5tqL6d3CLLLIVXSQS2jJQXf5fpbo/t7dU+Zr1pBD4RRY64QVsbGslBBG0v/fLTdeG+bjUdw==
   dependencies:
     "@babel/runtime" "^7.11.2"
     fast-deep-equal "^3.1.3"

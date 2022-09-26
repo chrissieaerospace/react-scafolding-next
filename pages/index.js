@@ -4,14 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { AuthenticationHOC } from "../app/Shared/hoc/Authentication";
-import { toPromise } from "react-boilerplate-redux-saga-hoc/utils";
+import { toPromise, useQuery } from "react-boilerplate-redux-saga-hoc/utils";
 function Home(props) {
   const {
+    reducerName,
     actions: { JSON_PLACEHOLDER_POSTS_API_CALL },
+    reducerConstants: { JSON_PLACEHOLDER_POSTS_API },
   } = props.Authentication_hoc;
+  const [json] = useQuery(reducerName, [JSON_PLACEHOLDER_POSTS_API]);
+  console.log(json);
   useEffect(() => {
     JSON_PLACEHOLDER_POSTS_API_CALL();
-  });
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -85,7 +89,6 @@ Home.getInitialProps = async (props) => {
   } = props.Authentication_hoc;
   let response;
   const { status, data } = await toPromise(JSON_PLACEHOLDER_POSTS_API_CALL);
-
   JSON_PLACEHOLDER_POSTS_API_CALL({
     callback: {
       successCallback({ data: { data } = {} }) {
@@ -93,9 +96,7 @@ Home.getInitialProps = async (props) => {
       },
     },
   });
-
   if (isServer) response = await store.sagaTask.toPromise();
-
   /* Please don't send key 'res' in return object it will create a circular dependency */
   return { store, response, jsonResponse: { status, data }, isServer };
 };
