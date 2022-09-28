@@ -47,7 +47,7 @@ const {
   reducer: AuthReducer,
   hoc: AuthenticationHOC,
   hook: useAuthenticationHOC,
-  ...AuthHocProps
+  // ...AuthHocProps
 } = HOC({
   [INITIAL_STATE]: {
     isLoggedIn: false,
@@ -58,7 +58,7 @@ const {
   [DONT_RESET_REDUCER_KEYS]: DONT_RESET_ON_LOGOUT_API_KEYS,
   [REDUCER_NAME]: AUTHENTICATION_REDUCER_NAME,
   [AXIOS_INTERCEPTORS]: axios,
-  [GET_DEFAULT_CONFIG]: true,
+  [GET_DEFAULT_CONFIG]: false,
   [REDUCER]: undefined,
 });
 
@@ -67,7 +67,7 @@ export {
   useAuthenticationHOC,
   AuthSaga,
   AuthReducer,
-  AuthHocProps,
+  // AuthHocProps,
 };
 
 /* Important Please don't remove below code for reference 

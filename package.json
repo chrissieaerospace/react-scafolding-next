@@ -12,7 +12,7 @@
     "axios": "^0.27.2",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-boilerplate-redux-saga-hoc": "^1.7.40",
+    "react-boilerplate-redux-saga-hoc": "^1.8.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.4",
     "redux": "^4.2.0",

@@ -53,7 +53,7 @@ const {
   reducer: DashReducer,
   hoc: DashboardHoc,
   hook: useDashboardHOC,
-  ...DashHocProps
+  // ...DashHocProps
 } = HOC({
   [INITIAL_STATE]: {},
   [REDUCER]: reducer,
@@ -62,7 +62,7 @@ const {
   [DONT_RESET_REDUCER_KEYS]: DONT_RESET_ON_LOGOUT_API_KEYS,
   [REDUCER_NAME]: DASHBOARD_REDUCER_NAME,
   [AXIOS_INTERCEPTORS]: axios,
-  [GET_DEFAULT_CONFIG]: true,
+  [GET_DEFAULT_CONFIG]: false,
 });
 
-export { DashSaga, DashReducer, DashboardHoc, useDashboardHOC, DashHocProps };
+export { DashSaga, DashReducer, DashboardHoc, useDashboardHOC };
